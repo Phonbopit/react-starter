@@ -4,19 +4,22 @@
 # from : https://github.com/christianalfoni/webpack-express-boilerplate
 # Usage : ./setup.sh
 
-# Clone a repository and install dependencies
-git clone https://github.com/christianalfoni/webpack-express-boilerplate.git react-starter
-cd react-starter
-npm install
+setup() {
+  # Clone a repository and install dependencies
+  git clone https://github.com/christianalfoni/webpack-express-boilerplate.git react-boilerplate
+  cd react-boilerplate
+  npm install
+  
+  # Remove git history
+  rm -rf .git
+  
+  # Initial git
+  git init
+  git add .
+  git commit -m "initial commit"
+}
 
-# Remove git history
-rm -rf .git
-
-# Initial git
-git init
-git add .
-git commit -m "initial commit"
-
+setup
 echo ===============================
 echo ""
 echo Setup Webpack Express Boilerplate Completed

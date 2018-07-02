@@ -1,17 +1,23 @@
 # react-starter
-Script to setup Webpack Express Boilerplate with React
+
+React Starter with Create React App + ESLint + Prettier
 
 ## Usage
 
-With Git
+Copy code below to `scripts` section in `package.json`
+
+```json
+"scripts": {
+  "lint": "./node_modules/.bin/eslint {src,test} --color",
+  "prettier": "prettier --write '{**/*.js,src/**/*.js,test/**/*.js}'",
+  "prettier:watch": "onchange '{**/*.js,src/**/*.js,test/**/*.js}' -- prettier --write {{changed}}"
+}
+```
+
+> Use `cross-env` If you use Windows for avoid a problem with path file/folder.
+
+Install dependencies
 
 ```
-git clone https://github.com/Phonbopit/react-starter && cd react-starter
-./setup.sh
-```
-
-With CURL
-
-```
-curl https://raw.githubusercontent.com/Phonbopit/react-starter/master/setup.sh | bash
+yarn add 
 ```

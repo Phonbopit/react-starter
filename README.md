@@ -40,4 +40,4 @@ and remove `eslintConfig` section in `package.json` (Use `.eslintrc` instead.)
 
 Done!
 
-Happy Coding :heart
+Happy Coding :heart:

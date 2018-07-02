@@ -1,17 +1,43 @@
 # react-starter
-Script to setup Webpack Express Boilerplate with React
+
+React Starter with Create React App + ESLint + Prettier
+
 
 ## Usage
 
-With Git
+1. Eject React with:
 
 ```
-git clone https://github.com/Phonbopit/react-starter && cd react-starter
-./setup.sh
+yarn eject
 ```
 
-With CURL
+Create React App will setup Jest, ESLint and Babel for default configuration.
+
+
+2. Copy code below to `scripts` section in `package.json`
+
+```json
+"scripts": {
+  "lint": "./node_modules/.bin/eslint {src,test} --color",
+  "prettier": "prettier --write '{**/*.js,src/**/*.js,test/**/*.js}'",
+  "prettier:watch": "onchange '{**/*.js,src/**/*.js,test/**/*.js}' -- prettier --write {{changed}}"
+}
+```
+
+> Use `cross-env` If you use Windows for avoid a problem with path file/folder.
+
+Install dependencies
 
 ```
-curl https://raw.githubusercontent.com/Phonbopit/react-starter/master/setup.sh | bash
+yarn add prettier eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-standard onchange --dev
 ```
+
+and remove `eslintConfig` section in `package.json` (Use `.eslintrc` instead.)
+
+3. Copy all files `.eslintrc`, `.editorconfig` and `.prettierrc` to your root folder.
+
+4. Create `test` folder and `**.spec.js` for your test file.
+
+Done!
+
+Happy Coding :heart

@@ -12,6 +12,7 @@
     "rules": {
         "space-before-function-paren": 0,
         "new-cap": 0,
+        "jsx-a11y/href-no-hash": 0,
         "no-extra-semi": 1,
         "prettier/prettier": 1
     }

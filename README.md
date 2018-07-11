@@ -1,4 +1,4 @@
-# react-starter
+# react-starter ![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
 
 React Starter with Create React App + ESLint + Prettier
 

@@ -29,7 +29,10 @@ Create React App will setup Jest, ESLint and Babel for default configuration.
 Install dependencies
 
 ```
-yarn add prettier eslint eslint-config-prettier eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-standard eslint-config-react-app onchange --dev
+yarn add prettier eslint eslint-config-prettier eslint-config-standard 
+eslint-plugin-import eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise 
+eslint-plugin-standard eslint-config-react-app eslint-plugin-flowtype 
+eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-jsx-a11y onchange --dev
 ```
 
 and remove `eslintConfig` section in `package.json` (Use `.eslintrc` instead.)
